@@ -114,6 +114,7 @@ const Banner = () => {
                 </div>
             </div>
             <div id="slide6" className="carousel-item relative w-full">
+
                 <img
                     src={img6}
                     className="w-full h-full object-cover rounded-xl" />
