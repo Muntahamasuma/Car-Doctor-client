@@ -6,6 +6,7 @@ import card4Img from "../../assets/images/products/2.png"
 import card5Img from "../../assets/images/products/5.png"
 import card6Img from "../../assets/images/products/4.png"
 import ratingImg from "../../assets/Group 46.png"
+import OutLineButton from "../../Components/OutLineButton";
 const Popular = () => {
     return (
         <div>
@@ -101,6 +102,7 @@ const Popular = () => {
   </div>
 </div>
             </div>
+            <OutLineButton outLineBtn={'More Products'}/>
         </div>
     );
 };

@@ -1,6 +1,7 @@
 import AboutUs from "./AboutUs";
 import Banner from "./Banner";
 import InfoSection from "./InfoSection";
+import OurTeam from "./OurTeam";
 import Popular from "./Popular";
 import ServiceArea from "./ServiceArea";
 
@@ -13,6 +14,7 @@ const Home = () => {
           <ServiceArea></ServiceArea>
           <InfoSection/>
           <Popular></Popular>
+          <OurTeam></OurTeam>
         </div>
     );
 };
