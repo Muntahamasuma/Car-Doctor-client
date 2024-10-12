@@ -4,6 +4,7 @@ import InfoSection from "./InfoSection";
 import OurTeam from "./OurTeam";
 import Popular from "./Popular";
 import ServiceArea from "./ServiceArea";
+import WhyChooseUs from "./WhyChooseUs";
 
 
 const Home = () => {
@@ -15,6 +16,7 @@ const Home = () => {
           <InfoSection/>
           <Popular></Popular>
           <OurTeam></OurTeam>
+          <WhyChooseUs></WhyChooseUs>
         </div>
     );
 };

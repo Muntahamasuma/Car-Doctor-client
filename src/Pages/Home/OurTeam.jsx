@@ -13,7 +13,7 @@ const OurTeam = () => {
             paragraph={"The majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. "}
             />
             {/* cards */}
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 my-10">
+            <div className="grid grid-cols-1 lg:grid-cols-3 gap-10 my-10">
                 {/* card1 */}
             <div className="card rounded-xl border-2 border-gray-200 items-center text-center">
   <figure>
