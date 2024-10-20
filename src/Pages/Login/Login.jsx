@@ -1,4 +1,4 @@
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import loginImg from '../../assets/images/login/login.svg'
 import { useContext } from 'react';
 import { AuthContext } from '../../Providers/AuthProvider';
@@ -6,7 +6,8 @@ import { AuthContext } from '../../Providers/AuthProvider';
 const Login = () => {
 
     const {signIn}= useContext(AuthContext); 
-
+    const navigate = useNavigate();
+    
     const handleLogin = e =>{
       e.preventDefault()
       const from = e.target;
@@ -15,11 +16,13 @@ const Login = () => {
         console.log( email, password)
 
         signIn(email,password)
-        .then(result => {
-            const user = result.user;
-            console.log(user)
-        })
-        .then(error => console.log(error))
+        .then(result =>{
+            console.log(result)
+            navigate('/');
+          })
+          .catch((error) => {
+            console.error("Login failed", error);
+          });
     }
     return (
         <div>

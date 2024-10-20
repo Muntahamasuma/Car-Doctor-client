@@ -1,4 +1,4 @@
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import loginImg from './../assets/images/login/login.svg'
 import { useContext } from 'react';
 import { AuthContext } from '../Providers/AuthProvider';
@@ -6,6 +6,7 @@ import { AuthContext } from '../Providers/AuthProvider';
 const SignUp = () => {
 
     const {createUser}= useContext(AuthContext);
+    const navigate = useNavigate();
 
     const handleSignUp = e =>{
         e.preventDefault()
@@ -16,12 +17,13 @@ const SignUp = () => {
         console.log(name, email, password)
 
         createUser(email,password)
-        .then(result => {
-            const user = result.user;
-            console.log(user)
-        })
-        .then(error => console.log(error))
-        
+        .then(result =>{
+          console.log(result)
+            navigate('/');
+          })
+          .catch((error) => {
+            console.error("Sign up failed", error);
+          });
       }
 
     return (

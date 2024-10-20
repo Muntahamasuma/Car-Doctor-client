@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 
 
 const Service = ({service}) => {
@@ -5,6 +6,7 @@ const Service = ({service}) => {
         title,
         img,
         price,
+        _id
         } = service
     return (
             <div className="card rounded-xl border-2 border-gray-200">
@@ -18,7 +20,7 @@ const Service = ({service}) => {
     <h2 className="card-title font-bold text-2xl">{title}</h2>
     <div className="card-actions justify-end">
     <p className="text-[#FF3811] font-bold text-xl">Price:{price}</p>
-      <a className="text-[#FF3811] text-4xl">»</a>
+      <Link to={`/checkout/${_id}`}><a className="text-[#FF3811] text-4xl">»</a></Link>
     </div>
   </div>
 </div>
