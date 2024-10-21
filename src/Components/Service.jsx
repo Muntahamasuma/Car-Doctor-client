@@ -20,7 +20,7 @@ const Service = ({service}) => {
     <h2 className="card-title font-bold text-2xl">{title}</h2>
     <div className="card-actions justify-end">
     <p className="text-[#FF3811] font-bold text-xl">Price:{price}</p>
-      <Link to={`/checkout/${_id}`}><a className="text-[#FF3811] text-4xl">»</a></Link>
+      <Link to={`/services/${_id}`}><a className="text-[#FF3811] text-4xl">»</a></Link>
     </div>
   </div>
 </div>
