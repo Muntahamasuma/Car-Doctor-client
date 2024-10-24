@@ -16,7 +16,7 @@ const Navbar = () => {
           title: "Log out succesfully",
           showConfirmButton: false,
           timer: 1500,
-          color: '#FF3811'
+          color: "#FF3811",
         });
       })
       .catch((error) => console.error("error"));
@@ -82,30 +82,26 @@ const Navbar = () => {
         </ul>
       </div>
       <div className="navbar-end">
+        {user?.email ? (
+          <div className="dropdown dropdown-end">
+            <div tabIndex={0} className="space-x-2">
+              <Link to='/bookings' className="btn btn-outline btn-sm lg:btn-md font-semibold text-xl text-[#FF3811] border-2 border-[#FF3811]">
+                Bookings
+              </Link>
 
-       {user?.email ?  <div className="dropdown dropdown-end">
-          <div
-            tabIndex={0}
-            role="button"
-            className="btn btn-ghost btn-circle avatar"
-          >
-            <div className="w-10 rounded-full">
-              <img
-                alt="Tailwind CSS Navbar component"
-                src="https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.webp"
-              />
+              <a
+                onClick={hanldeLogOut}
+                className="btn btn-outline btn-sm lg:btn-md font-semibold text-xl text-[#FF3811] border-2 border-[#FF3811] text-center"
+              >
+                Logout
+              </a>
             </div>
           </div>
-          <ul
-            tabIndex={0}
-            className="menu menu-sm dropdown-content space-y-2 bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow"
-          >
-            <button className="btn btn-outline btn-sm font-semibold text-lg text-[#FF3811] border-2 border-[#FF3811]">Appointment</button> 
-            <li>
-              <a onClick={hanldeLogOut} className="btn btn-outline btn-sm font-semibold text-lg text-[#FF3811] border-2 border-[#FF3811] text-center">Logout</a>
-            </li>
-          </ul>
-        </div> : <li className="btn font-semibold text-xl text-white bg-[#FF3811] text-center"><Link to='/login'>Login</Link ></li> }
+        ) : (
+          <li className="btn font-semibold text-xl text-white bg-[#FF3811] text-center">
+            <Link to="/login">Login</Link>
+          </li>
+        )}
       </div>
     </div>
   );
